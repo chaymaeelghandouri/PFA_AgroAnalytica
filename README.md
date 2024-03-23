@@ -1,3 +1,7 @@
+# Projet en cours de réalisation par :
+Hafsa EL khezzane
+Lina Asbagui 
+Chaymae El Ghandouri
 # PFA_AgroAnalytica
 AgroAnalytica est une application web qui permet aux agriculteurs et aux agronomes d'analyser les caractéristiques du sol et d'obtenir des prédictions de cultures adaptées. L'application est conçue pour être intuitive et facile à utiliser, et elle offre les fonctionnalités suivantes :
 1. Définir une zone d'intérêt
@@ -9,9 +13,9 @@ AgroAnalytica est une application web qui permet aux agriculteurs et aux agronom
 3. Visualiser les résultats sur une carte interactive
   •	Les différentes cultures prédites sont visualisées avec des couleurs et des légendes distinctes.
   •	Des fenêtres contextuelles (popovers) affichent des informations détaillées sur chaque zone prédite, comme la culture suggérée, la probabilité de succès et les recommandations culturales.
-=>Technologies utilisées
-  •	Frameworks de développement web: HTML, CSS,JavaScript , ReactJS
-  •	Un système d’information géographique 
+# Technologies utilisées
+  •	Frameworks de développement web: ReactJS
+  •	Un système d’information géographique (QSIG)
   •	Algorithmes de Machine Learning
-  •	Language R 
+  •	Language R , python 
   •	Power BI 
