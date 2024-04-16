@@ -35,5 +35,5 @@ AgroAnalytica est une application web qui permet aux agriculteurs et aux agronom
 [Node.js](https://nodejs.org/en)  est requis pour pouvoir exécuter cette application. C'est le back end de l'app. Pour installer tous les modules nécessaires au fonctionnement de notre jeu, exécutez la commande suivante :
 
 
-`npm install`
+``npm install -g create-react-app``
   
