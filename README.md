@@ -26,8 +26,13 @@ AgroAnalytica est une application web qui permet aux agriculteurs et aux agronom
   •	Algorithmes de Machine Learning
 
   
-  •	[Rstodio](https://posit.co/download/rstudio-desktop/)
+  •	[Rstudio](https://posit.co/download/rstudio-desktop/)
   
   •	Power BI (https://www.microsoft.com/fr-fr/power-platform/products/power-bi)
-  
+
+
+#Installation et Execution de l'application web
+[Node.js](https://nodejs.org/en)  est requis pour pouvoir exécuter cette application. C'est le back end de l'app. Pour installer tous les modules nécessaires au fonctionnement de notre jeu, exécutez la commande suivante :
+"npm install"
+
   
