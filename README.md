@@ -45,3 +45,6 @@ AgroAnalytica est une application web qui permet aux agriculteurs et aux agronom
 
 
 `npm start`
+
+# Date de sortie du JEU
+Fin Mai 
