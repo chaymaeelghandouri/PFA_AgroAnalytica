@@ -39,7 +39,7 @@ AgroAnalytica est une application web qui permet aux agriculteurs et aux agronom
 
 
 
-`npx create-react-app myapp`
+`npx create-react-app my-app`
 
 
 
