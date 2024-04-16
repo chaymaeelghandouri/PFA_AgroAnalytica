@@ -15,9 +15,19 @@ AgroAnalytica est une application web qui permet aux agriculteurs et aux agronom
   •	Des fenêtres contextuelles (popovers) affichent des informations détaillées sur chaque zone prédite, comme la culture suggérée, la probabilité de succès et les recommandations culturales.
 # Technologies utilisées
   •	Frameworks de développement web:[Node.js](https://nodejs.org/en)
+
+  
   • [Visual Studio Code](https://code.visualstudio.com/)
-  •	Un système d’information géographique (QSIG)
+
+  
+  •	Un système d’information géographique [QSIG] (https://www.qgis.org/fr/site/)
+
+  
   •	Algorithmes de Machine Learning
-  •	Language R , python 
-  •	Power BI 
+
+  
+  •	[Rstodio](https://posit.co/download/rstudio-desktop/)
+  
+  •	Power BI (https://www.microsoft.com/fr-fr/power-platform/products/power-bi)
+  
   
