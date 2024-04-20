@@ -1,0 +1,607 @@
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.bounce-animation {
+    animation: bounce 0.5s infinite forwards;
+}
+
+/****************************** Authentication and Register pages *****************************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+section .imgBox {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: left; 
+}
+
+section .imgBox > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+section .logo {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+}
+section .logoImg {
+    width: 100px; 
+    height: auto;
+}
+
+section .contentBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+
+}
+
+section .contentBox .formBox h2{
+    color: #243036;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid rgb(28, 71, 49);
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.inputBox{
+    margin-bottom: 20px;
+}
+ 
+.inputBox span{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #151d30;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.inputBox input{
+    width: 100%;
+    padding: 10px 20px;
+    font-weight: 400;
+    border: 1px solid #bec1c2;
+    letter-spacing: 1px;
+    outline: none;
+    background-color: transparent;
+    border-radius: 10px;
+
+}
+
+.inputBox input[type="Submit"] {
+    background-color: rgb(27, 58, 42);
+    color: white;
+    border: 0;
+    outline: 0;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.inputBox input[type="Submit"]:hover{
+    background-color: rgb(167, 231, 198);
+}
+
+.inputBox p {
+    color: rgb(17, 43, 29);
+    text-align: center;
+}
+
+.contentBox p a {
+    color: rgb(17, 43, 29);  
+}
+
+/*********************************** MainPage styles *********************************/
+.MainPage {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.Navigation, .Acceuil, .Apropos {
+    flex: 1;
+}
+
+.Navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: rgb(25 143 81);
+    box-shadow: 0 2px 5px rgba(24, 41, 20, 0.1);
+}
+
+.Navigation .logo {
+    top: 10px;
+    left: 10px; 
+}
+
+.logoImg {
+    width: 100px;
+    border-radius: 60%;
+}
+
+.logoname {
+    font-weight: bold;
+    font-size: 48px;
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    list-style-type: none;
+    align-content: center;
+}
+
+.navbar a {
+    padding: 15px;
+    color: white;
+    background-color: rgb(23, 134, 55);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px;
+}
+
+.navbar a:hover {
+    background-color: rgb(38, 205, 86);
+}
+
+.Acceuil {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.video-background {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+}
+
+.video-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-paragraph {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1; 
+    color: white;
+    text-align: center;
+    width: 80%; 
+    max-width: 800px;
+}
+
+.video-paragraph > div {
+    max-width: 800px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.commence > a{
+    padding: 15px 30px;
+    color: white;
+    background-color: rgb(23, 134, 55);
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.commence > a:hover{
+    padding: 15px 30px;
+    color: white;
+    background-color: rgb(86, 219, 123);
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.sound-button {
+    padding: 10px 15px;
+    background-color: #7ad188;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 600px;
+    margin-left: 1200px;
+}
+
+.sound-button:hover {
+    background-color: #fff7f7;
+}
+
+.Apropos {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.Apropos > .titre{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.flex-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 390px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card > img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card > p {
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    color: #555555;
+    line-height: 1.6;
+}
+
+.Contact {
+    align-items: center;
+    padding: 60px 20px;
+    background-image: url('/public/img1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Contact > .card {
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    margin-left:300px ;
+    margin-right:250px ;
+    text-align: center;
+    position: relative;
+}
+
+.Contact > .imgBox {
+    display: none;
+}
+
+.Contact > .card h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.Contact > .card p {
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    color: #555555;
+    line-height: 1.6;
+}
+
+.Contact > .card > .mail {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.Contact > .card > a {
+    padding: 15px 30px;
+    background-color: rgb(23, 134, 55);
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Contact > .card > a:hover {
+    background-color: rgb(38, 205, 86);
+}
+
+
+/************************************* Insert page *****************************************/
+.insert {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.form-container, .map-container{
+    flex: 2;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-top: 70px;
+    height: 700%;
+}
+
+.map-container .map, .map-container .back {
+    flex: 1;
+    flex-direction: column;
+    margin: 35px;
+}
+
+.form-container header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(46, 117, 81);
+    box-shadow: 0 2px 5px rgba(251, 253, 251, 0.1);
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Segoe UI';
+    color: white;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin-bottom: 10px;
+}
+
+.form-container input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.map-container .leaflet-container {
+    height: 700px;
+    width: 100%;
+}
+
+
+/**************************************************Page Contact*******************************/
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+section .imgBox {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: left; 
+}
+
+section .imgBox > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+section .logo {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+}
+section .logoImg {
+    width: 100px; 
+    height: auto;
+}
+
+section .contentBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+
+}
+
+section .contentBox .formBox h2{
+    color: #243036;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    border-bottom: 4px solid rgb(28, 71, 49);
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+section .contentBox .formBox .contactForm{
+    margin: 10px;
+}
+
+.inputBox1{
+    margin-bottom: 20px;
+}
+ 
+.inputBox1 span{
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 2px;
+    display: inline-block;
+    color: #151d30;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.inputBox1 input{
+    width: 100%;
+    padding: 7px 10px;
+    font-weight: 400;
+    border: 1px solid #bec1c2;
+    letter-spacing: 1px;
+    outline: none;
+    background-color: transparent;
+    border-radius: 10px;
+
+}
+
+.inputBox1 input[type="Submit"] {
+    background-color: rgb(27, 58, 42);
+    color: white;
+    border: 0;
+    outline: 0;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.inputBox1 input[type="Submit"]:hover{
+    background-color: rgb(167, 231, 198);
+}
+
+.inputBox2 input{
+    width: 100%;
+    padding: 25px 10px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    border: 1px solid #bec1c2;
+    letter-spacing: 1px;
+    outline: none;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.inputBox2 span{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #151d30;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/**************************************************Button de retoure*******************************/
+.back > a{
+    padding: 15px 30px;
+    color: white;
+    background-color: rgb(23, 134, 55);
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back > a:hover {
+    padding: 15px 30px;
+    color: white;
+    background-color: rgb(23, 134, 55);
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: rgb(38, 205, 86);
+}
