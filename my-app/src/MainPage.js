@@ -39,14 +39,13 @@ function MainPage() {
                 </div>
 
                 <div className="logoname">AgroAnalytica</div>
-                    <div className="navbar">
-                        <a href="#Acceuil">Acceuil</a>
-                        <a href="#Apropos">A propos</a>
-                        <a href="#Contact">Contact</a>
-                        <a href="Connexion">Connexion</a>
-                        <a href="Créeruncompte">Créer un compte</a>
-                    </div>
-                    
+                <div className="navbar">
+                    <a href="#Acceuil">Acceuil</a>
+                    <a href="#Apropos">A propos</a>
+                    <a href="#Contact">Contact</a>
+                    <a href="Connexion">Connexion</a>
+                    <a href="Créeruncompte">Créer un compte</a>
+                </div>
             </section>
 
             <section id='Acceuil' className='Acceuil'>
