@@ -35,7 +35,9 @@ function MainPage() {
         <div className='MainPage'>
             <section className='Navigation'>
                 <div className='logo'>
+                    <img src="./logo3.jpg" alt="logo" className="logoImg" />
                 </div>
+
                 <div className="logoname">AgroAnalytica</div>
                     <div className="navbar">
                         <a href="#Acceuil">Acceuil</a>
@@ -77,7 +79,7 @@ function MainPage() {
                 </div> 
                 <div className="flex-panel">
                     <article className="card">
-                        <img src="./images2.jpg" alt="image libghitiw hihi " />
+                        <img src="./prop.webp" alt="image libghitiw hihi " />
                         <p>Une des principales contributions d'AgroAnalytica réside dans son aptitude à ameliorer les rendements agricoles.
                             Grace à des analyses détaillées des caractéristiques du sol, des conditions métérologiques et d'autres facteurs 
                             pertinents, notre application fournit des recommandations précises pour le choix des cultures, l'utilisation des 
@@ -86,15 +88,16 @@ function MainPage() {
                             pertes de récolte.</p>
                     </article>
                     <article className="card">
-                        <img src="./images2.jpg" alt="hhhhhhhh" />
+                        <img src="./prop2.webp" alt="hhhhhhhh" />
                         <p>
-                            bla bla bla
+                        Grâce à cette fonctionnalité, les agriculteurs peuvent cartographier et visualiser leurs champs, identifier les zones à haut rendement et les zones à risque, et prendre des décisions éclairées pour l'optimisation de leurs pratiques agricoles. De plus, notre système SIG facilite la planification stratégique en permettant aux utilisateurs de tracer des itinéraires d'irrigation efficaces, d'appliquer des techniques de gestion des cultures adaptées à des zones spécifiques et même de prévoir 
+                        les risques potentiels liés aux catastrophes naturelles
                         </p>
                     </article>
                     <article className="card">
-                        <img src="./images2.jpg" alt="hhhhhhhh" />
+                        <img src="./prop3.webp" alt="hhhhhhhh" />
                         <p>
-                            bla bla bla
+                        Notre chatbot en agriculture est votre assistant virtuel dédié, toujours prêt à répondre à vos questions et à vous fournir des conseils personnalisés pour améliorer vos pratiques agricoles. Que vous ayez besoin de recommandations sur les cultures à planter, des conseils sur la gestion des maladies des plantes, ou même des informations météorologiques pour prendre des décisions éclairées, notre chatbot est là pour vous aider, 24 heures sur 24, 7 jours sur 7
                         </p>
                     </article>
                 </div>

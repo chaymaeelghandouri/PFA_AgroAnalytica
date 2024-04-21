@@ -150,6 +150,7 @@ section .contentBox .formBox h2{
 .logoImg {
     width: 100px;
     border-radius: 60%;
+    margin-top: 22px;
 }
 
 .logoname {
@@ -157,7 +158,7 @@ section .contentBox .formBox h2{
     font-size: 48px;
     text-decoration: none;
     color: white;
-    margin-right: 10px;
+    margin-left: 85px;
     cursor: pointer;
 }
 
@@ -170,11 +171,13 @@ section .contentBox .formBox h2{
 .navbar a {
     padding: 15px;
     color: white;
-    background-color: rgb(23, 134, 55);
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: larger;
 }
 
 .navbar a:hover {
@@ -184,7 +187,7 @@ section .contentBox .formBox h2{
 .Acceuil {
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
+    margin-top: 5px;
     margin-bottom: 40px;
 }
 
@@ -296,7 +299,7 @@ section .contentBox .formBox h2{
 }
 
 .card {
-    background-color: #ffffff;
+    background-color:rgb(25 143 81);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -310,7 +313,7 @@ section .contentBox .formBox h2{
 
 .card > img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
     border-radius: 8px 8px 0 0;
 }
@@ -319,16 +322,17 @@ section .contentBox .formBox h2{
     padding: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: justify;
-    color: #555555;
+    color: #f1f6f8;
     line-height: 1.6;
 }
 
 .Contact {
     align-items: center;
     padding: 60px 20px;
-    background-image: url('/public/img1.jpg');
+    background-image: url('/public/1.avif');
     background-size: cover;
     background-repeat: no-repeat;
+    height: 800px;
 }
 
 .Contact > .card {
