@@ -98,17 +98,19 @@ section .contentBox .formBox h2{
 
 }
 
-.inputBox input[type="Submit"] {
+.inputBox a[type="Submit"] {
     background-color: rgb(27, 58, 42);
     color: white;
     border: 0;
     outline: 0;
     font-weight: 600;
     cursor: pointer;
-
+    padding: 5px 80px 5px 100px;
+    border-radius: 10px;
+    margin-left: 20px;
 }
 
-.inputBox input[type="Submit"]:hover{
+.inputBox a[type="Submit"]:hover{
     background-color: rgb(167, 231, 198);
 }
 
@@ -129,11 +131,11 @@ section .contentBox .formBox h2{
     box-sizing: border-box;
 }
 
-.Navigation, .Acceuil, .Apropos {
+.MainPage .Navigation, .Acceuil, .Apropos {
     flex: 1;
 }
 
-.Navigation {
+.MainPage .Navigation {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -143,18 +145,17 @@ section .contentBox .formBox h2{
     box-shadow: 0 2px 5px rgba(24, 41, 20, 0.1);
 }
 
-.Navigation .logo {
+.MainPage .Navigation .logo {
     top: 10px;
     left: 20px; 
 }
 
-.Navigation .logo .logoImg {
+.MainPage .Navigation .logo .logoImg {
     width: 100px;
-    border-radius: 60%;
     margin-top: 22px;
 }
 
-.logoname {
+.MainPage .logoname {
     font-weight: bold;
     font-size: 48px;
     text-decoration: none;
@@ -163,13 +164,13 @@ section .contentBox .formBox h2{
     cursor: pointer;
 }
 
-.navbar {
+.MainPage .navbar {
     display: flex;
     list-style-type: none;
     align-content: center;
 }
 
-.navbar a {
+.MainPage .navbar a {
     padding: 15px;
     color: white;
     border-radius: 4px;
@@ -181,7 +182,7 @@ section .contentBox .formBox h2{
     font-size: larger;
 }
 
-.navbar a:hover {
+.MainPage .navbar a:hover {
     background-color: rgb(38, 205, 86);
 }
 
@@ -389,78 +390,6 @@ section .contentBox .formBox h2{
 }
 
 
-/************************************* Insert page *****************************************/
-.insert {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 20px;
-}
-
-.form-container, .map-container{
-    flex: 2;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    margin-top: 70px;
-    height: 700%;
-}
-
-.map-container .map, .map-container .back {
-    flex: 1;
-    flex-direction: column;
-    margin: 35px;
-}
-
-.form-container header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    width: 100%;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(46, 117, 81);
-    box-shadow: 0 2px 5px rgba(251, 253, 251, 0.1);
-    font-size: 35px;
-    font-weight: bold;
-    font-family: 'Segoe UI';
-    color: white;
-}
-
-.form-container form {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-container label {
-    margin-bottom: 10px;
-}
-
-.form-container input[type="text"] {
-    width: calc(100% - 20px);
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.form-container button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-.map-container .leaflet-container {
-    height: 700px;
-    width: 100%;
-}
 
 
 /**************************************************Page Contact*******************************/
@@ -587,20 +516,19 @@ section .contentBox .formBox .contactForm{
 
 /**************************************************Button de retoure*******************************/
 .back > a{
-    margin-top: 10px;
-    padding: 15px 30px;
+    padding: 10px 30px;
     color: white;
     background-color: rgb(23, 134, 55);
     color: #ffffff;
     font-weight: bold;
     text-transform: uppercase;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .back > a:hover {
-    padding: 15px 30px;
+    padding: 10px 30px;
     color: white;
     background-color: rgb(23, 134, 55);
     color: #ffffff;

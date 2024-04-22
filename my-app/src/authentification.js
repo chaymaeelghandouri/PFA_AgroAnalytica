@@ -8,7 +8,7 @@ function Authentification() {
                 <img src="./img.jpg" alt="image" />
             </div>
             <div className='logo'>
-                <img src="./logo3.jpg" alt="logo" className="logoImg" />
+                <img src="./sprout.png" alt="logo" className="logoImg" />
             </div>
             <div className="contentBox">
                 <div className="formBox">
@@ -23,7 +23,7 @@ function Authentification() {
                             <input id="password" name="password" type="text" required /><br />
                         </div>
                         <div className="inputBox">
-                            <input type="submit" value="Connect" />
+                            <a type="submit" href="/Utilisateur">Connect</a>
                         </div>
                         <div className="inputBox">
                             <p>Don't have an account? <a href="/Créeruncompte">Register here</a>.</p>

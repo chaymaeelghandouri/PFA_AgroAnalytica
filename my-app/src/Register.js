@@ -8,7 +8,7 @@ function Formulaire() {
                 <img src="./img.jpg" alt="image" />
             </div>
             <div className='logo'>
-                <img src="./logo3.jpg" alt="logo" className="logoImg" />
+                <img src="./sprout.png" alt="logo" className="logoImg" />
             </div>
             <div className="contentBox">
                 <div className="formBox">
@@ -40,7 +40,7 @@ function Formulaire() {
                         </div>
 
                         <div className="inputBox">
-                            <input type="submit" value="Créer un compte" />
+                            <a type="submit" href="/Utilisateur">Créer un compte</a>
                         </div>
 
                         <div className="inputBox">

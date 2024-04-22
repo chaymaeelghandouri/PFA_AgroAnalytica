@@ -35,7 +35,7 @@ function MainPage() {
         <div className='MainPage'>
             <section className='Navigation'>
                 <div className='logo'>
-                    <img src="./logo3.jpg" alt="logo" className="logoImg" />
+                    <img src="./sprout.png" alt="logo" className="logoImg" />
                 </div>
 
                 <div className="logoname">AgroAnalytica</div>
@@ -56,7 +56,7 @@ function MainPage() {
                         </video>
                     </div>
                 </div>
-                <div className="paragraph video-paragraph">
+                <div className="video-paragraph">
                     <div>
                         AgroAnalytica est une application web innovante conçue pour répondre aux besoins des agriculteurs 
                         et des agronomes en matière d'analyse des caractéristiques du sol et de prédictions de cultures 
@@ -64,7 +64,7 @@ function MainPage() {
                         puissantes pour optimiser les décisions agricoles et maximiser les rendements.
                     </div>
                     <div className="commence">
-                        <a href="Insert">Commencer</a>
+                        <a href="Connexion">Commencer</a>
                     </div>
                 </div>
                 <button onClick={() => toggleVideoSound()} className="sound-button">
