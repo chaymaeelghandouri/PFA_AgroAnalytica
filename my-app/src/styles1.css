@@ -1,0 +1,430 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.Utilisateur {
+    display: flex;
+    height: 100vh;
+}
+
+/******************************************NAVIGATION**************************************************/
+
+.Utilisateur .Navigation {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(23, 134, 55);
+    color: #ffffff;
+}
+
+.Utilisateur .Navigation .logo {
+    margin-bottom: 20px;
+}
+
+.Utilisateur .Navigation .logo .logoImg {
+    width: 100px;
+    margin-right: 130%;
+}
+
+.Utilisateur .Navigation .navbox .logoname button {
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 50px;
+    background-color: rgb(23, 134, 55);
+    border: none;
+}
+
+.Utilisateur .Navigation .navbox .logoname button:hover {
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: none;
+    color: rgb(102, 245, 102);
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 50px;
+    background-color: rgb(23, 134, 55);
+    border: none;
+}
+
+.Utilisateur .Navigation .navbox .username {
+    background-color: white;
+    margin-top: 5px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.Utilisateur .Navigation .navbox .username span {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(79, 197, 56);
+}
+
+.Utilisateur .Navigation .navbox .username .icon {
+    width: 45px;
+    height: 45px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.Utilisateur .Navigation .navbox .username .icon:hover {
+    width: 55px;
+    height: 55px;
+    margin-left: 15px;
+    cursor: pointer;
+    background-color: rgb(23, 134, 55);
+    border-radius: 50%;
+}
+
+.Utilisateur .Navigation .navbox .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0px 50px 0px 60px;
+}
+
+.Utilisateur .Navigation .navbox .navbar button {
+    display: flex;
+    align-items: center;
+    background-color: rgb(38, 205, 86);
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.Utilisateur .Navigation .navbox .navbar button {
+        display: flex;
+        align-items: center;
+        background-color: rgb(38, 205, 86);
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+        position: relative;
+}
+
+.Utilisateur .navbar button:hover::after {
+    content: attr(data-text); 
+    position: absolute; 
+    top: 100%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: rgba(121, 226, 165, 0.8); 
+    color: #ffffff; 
+    padding: 5px 10px; 
+    border-radius: 4px; 
+    font-size: 14px; 
+    white-space: nowrap; 
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0.3s ease; 
+}
+
+.Utilisateur .navbar button:hover::after {
+    opacity: 1; 
+    visibility: visible; 
+}
+
+.Utilisateur .Navigation .navbox .navbar button:hover {
+    background-color: rgba(162, 255, 143, 0.8);
+}
+
+.Utilisateur .Navigation .navbar .icon {
+    width: 50px;
+    height: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/******************************************CONTENT**************************************************/
+
+.Utilisateur .Content {
+    flex: 4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Utilisateur .Content .Presentation .card {
+    background-color: #c8d3c9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgb(188, 241, 188);
+    width: 900px;
+    height: 600px;
+    text-align: justify;
+}
+
+.Utilisateur .Content .Presentation .card h1 {
+    background-color: #68c770;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Utilisateur .Content .Presentation .card p {
+    background-color: #a3f3aa;
+    color: green;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.Utilisateur .Content .Presentation .commence a {
+    background-color: #21833a;
+    color: #ffffff;
+    padding: 10px 70px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.Utilisateur .Content .Presentation .commence a:hover {
+    background-color: #41af5d;
+}
+
+.Utilisateur .Content  .section-visible {
+    display: block;
+}
+
+.Utilisateur .Content .section-hidden {
+    display: none;
+}
+
+
+
+/******************************************COMMUNE**************************************************/
+.Utilisateur .Content .Analyses .name,
+.Utilisateur .Content .Dashboard .name,
+.Utilisateur .Content .SIG .name,
+.Utilisateur .Content .ChatBot .name,
+.Utilisateur .Content .Profile .name{
+    background-color: #68c770;
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/******************************************ANALYSES**************************************************/
+.Utilisateur .Content .Analyses .flexbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Utilisateur .Content .Analyses .left,
+.Utilisateur .Content .Analyses .rigth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%; /* Pour s'assurer qu'elles prennent un peu moins de la moitié de la largeur parente */
+}
+
+.Utilisateur .Content .Analyses .left .message,
+.Utilisateur .Content .Analyses .rigth .message {
+    margin-top: 20px;
+    background-color: #a3f3aa;
+    color: green;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.Utilisateur .Content .Analyses .left .bouton,
+.Utilisateur .Content .Analyses .rigth .bouton {
+    background-color: #e2ae72;
+    color: #b3743a;
+    padding: 10px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.Utilisateur .Content .Analyses .left .bouton:hover,
+.Utilisateur .Content .Analyses .rigth .bouton:hover {
+    background-color: #e9a751;
+}
+
+.Utilisateur .Content .Analyses .left .card,
+.Utilisateur .Content .Analyses .rigth .card {
+    background-color: #a3f3aa;
+    padding: 30px;
+    margin-top: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgb(188, 241, 188);
+    width: 100%; /* Ajustez la largeur comme nécessaire */
+    text-align: justify;
+}
+
+/******************************************CHATBOT**************************************************/
+.Utilisateur .Content .ChatBot {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+
+.Utilisateur .Content .ChatBot .chat-messages {
+    max-height: 450px; 
+    overflow-y: auto; 
+    padding: 10px;    
+    background-color: #f0f0f0;
+    margin-bottom: 60px; 
+}
+
+.Utilisateur .Content .ChatBot .chat-messages div {
+    margin-bottom: 20px; 
+    padding: 8px 12px; 
+    border-radius: 8px;
+    background-color: #ffffff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    word-break: break-word; 
+}
+
+.Utilisateur .Content .ChatBot .chat-messages div:last-child {
+    margin-bottom: 0; 
+}
+
+.Utilisateur .Content .ChatBot .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    position: absolute; 
+    bottom: 0; 
+    margin-bottom: 20px;
+}
+
+.Utilisateur .Content .ChatBot .input-container input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.Utilisateur .Content .ChatBot .input-container input[type="text"]:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+.Utilisateur .Content .ChatBot .input-container button {
+    padding: 15px 30px 10px 30px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Utilisateur .Content .ChatBot .input-container button:hover {
+    background-color: #218838;
+}
+
+/************************************* Insert page *****************************************/
+.insert {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.form-container, .map-container{
+    flex: 2;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-top: 70px;
+    height: 700%;
+}
+
+.map-container .map, .map-container .back {
+    flex: 1;
+    flex-direction: column;
+    margin: 35px;
+}
+
+.form-container header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(46, 117, 81);
+    box-shadow: 0 2px 5px rgba(251, 253, 251, 0.1);
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Segoe UI';
+    color: white;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin-bottom: 10px;
+}
+
+.form-container input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.map-container .leaflet-container {
+    height: 700px;
+    width: 100%;
+}

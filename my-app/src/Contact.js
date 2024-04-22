@@ -32,7 +32,7 @@ function Contact() {
                 <img src="./img.jpg" alt="image" />
             </div>
             <div className='logo'>
-                <img src="./logo3.jpg" alt="logo" className="logoImg" />
+                <img src="./sprout.png" alt="logo" className="logoImg" />
             </div>
             <div className="contentBox">
                 <div className="formBox">

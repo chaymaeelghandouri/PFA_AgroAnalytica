@@ -5,6 +5,7 @@ import Contact from './Contact';
 import Register from './Register'
 import Authentification from './authentification'
 import Insert from './Insert';
+import Utilisateur from './Utilisateur';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/Créeruncompte" element={<Register />} />
         <Route path="/Connexion" element={<Authentification />} />
         <Route path="/Insert" element={<Insert />} />
+        <Route path="/Utilisateur" element={<Utilisateur />} />
       </Routes>
     </Router>
   );
