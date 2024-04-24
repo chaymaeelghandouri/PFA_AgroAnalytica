@@ -4,6 +4,7 @@ import { MapContainer, TileLayer, Polygon } from 'react-leaflet';
 import axios from 'axios';
 import "leaflet/dist/leaflet.css";
 
+
 function Insert() {
     const [formData, setFormData] = useState({
         N: '',
@@ -61,6 +62,27 @@ function Insert() {
         setPolygonCoords([...polygonCoords, [lat, lng]]);
     };
 
+    const fetchPrediction = async () => {
+        const data = {
+            ...formData,
+            N: parseFloat(formData.N),
+            P: parseFloat(formData.P),
+            K: parseFloat(formData.K),
+            temperature: parseFloat(formData.temperature),
+            humidity: parseFloat(formData.humidity),
+            ph: parseFloat(formData.ph),
+            rainfall: parseFloat(formData.rainfall)
+        };
+
+        try {
+            const response = await axios.post('http://localhost:5000/predict', data); // Modifier l'URL si nécessaire
+            const { prediction } = response.data;
+            setFormData({ ...formData, label: prediction });
+        } catch (error) {
+            alert('Erreur lors de la prédiction. Veuillez réessayer.');
+        }
+    };
+
     return (
         <div className="insert">
             <div className="form-container">
@@ -98,19 +120,8 @@ function Insert() {
                         Culture:
                         <input type="text" name="label" value={formData.label} onChange={handleChange} />
                     </label>
-                    <button type="submit">Submit</button>
+                    <button type="button" onClick={fetchPrediction}>Prédire</button> {/* Ajouter ce bouton pour déclencher la prédiction */}
                 </form>
-            </div>
-            <div className="map-container">
-                <div className='map'>
-                    <MapContainer center={[51.505, -0.09]} zoom={13} style={{ height: "400px", width: "100%" }} onClick={handleMapClick}>
-                        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                        <Polygon positions={polygonCoords} />
-                    </MapContainer>
-                </div>
-                <div className="back"> 
-                    <a href="/">Retourner à la page principale</a>
-                </div>
             </div>
         </div>
     );

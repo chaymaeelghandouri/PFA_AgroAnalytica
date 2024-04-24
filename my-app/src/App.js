@@ -9,8 +9,6 @@ import Utilisateur from './Utilisateur';
 
 function App() {
   return (
-    //HNAYA 3YT LJAMI3 LES ROUTES LIDRNA MN WAHED LA PAGE L2OKHRA, DAK PATH=".." FIH SMYA DLA ROUTE WLELEMENT FIH SMYA DYAL 
-    //LOBJET DIAL WAHED LFONCTION
     <Router>
       <Routes>
         <Route path="/" element={<MainPage />} />
