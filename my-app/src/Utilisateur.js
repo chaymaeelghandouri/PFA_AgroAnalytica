@@ -3,6 +3,7 @@ import './styles1.css';
 
 function Utilisateur() {
     const [activeSection, setActiveSection] = useState(null);
+    const [prediction, setPrediction] = useState(null);
 
     const handleButtonClick = (sectionId) => {
         setActiveSection(sectionId);
@@ -57,7 +58,7 @@ function Utilisateur() {
                             <img src="./dashboard.png" alt="Dashboard" className="icon" />
                         </button>
                         <button onClick={() => handleButtonClick('SIG')} data-text="Système d'information géographique">
-                            <img src="./layers.png" alt="SIG" className="icon" />
+                            <img src="./land.png" alt="SIG" className="icon" />
                         </button>
                         <button onClick={() => handleButtonClick('ChatBot')} data-text="ChatBot">
                             <img src="./chatbot.png" alt="ChatBot" className="icon" />
@@ -66,7 +67,6 @@ function Utilisateur() {
                 </div>
             </section>
             <section className='Content'>
-                {/* Presentation Section */}
                 <section  id='Presentation'  className={`Presentation ${activeSection !== 'Presentation' ? 'section-hidden' : 'section-visible'}`}>
                     <div className="flex-panel">
                         <article className="card">
@@ -91,7 +91,6 @@ function Utilisateur() {
                         </article>
                     </div>
                 </section>
-                {/* Other Sections */}
                 <section id='Analyses' className={`Analyses ${activeSection === 'Analyses' ? 'section-visible' : 'section-hidden'}`}>
                     <div className="name">Analyses 📊</div>
                     <div className='flexbox'>
@@ -114,19 +113,18 @@ function Utilisateur() {
                             </article>
                         </div>
                     </div>
+                    {prediction && <div>Prédiction: {prediction}</div>} {/* Afficher la prédiction ici */}
                 </section>
-
                 <section id='Dashboard' className={`Dashboard ${activeSection === 'Dashboard' ? 'section-visible' : 'section-hidden'}`}>
                     <div className="name">Dashboard 📈</div>
+
                 </section>
                 <section id='SIG' className={`SIG ${activeSection === 'SIG' ? 'section-visible' : 'section-hidden'}`}>
                     <div className="name">Système d'information géographique 🌎</div>
                 </section>
-                {/* ChatBot Section */}
                 <section id='ChatBot' className={`ChatBot ${activeSection === 'ChatBot' ? 'section-visible' : 'section-hidden'}`}>
                     <div className="name">ChatBot 💬</div>
                     <div className="chat-messages">
-                        {/* Messages will appear here */}
                     </div>
                     <div className="input-container">
                         <input type="text" placeholder="Type your message..." />
