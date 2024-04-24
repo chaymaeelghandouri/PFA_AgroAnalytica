@@ -57,7 +57,7 @@ function Utilisateur() {
                             <img src="./dashboard.png" alt="Dashboard" className="icon" />
                         </button>
                         <button onClick={() => handleButtonClick('SIG')} data-text="Système d'information géographique">
-                            <img src="./layers.png" alt="SIG" className="icon" />
+                            <img src="./land.png" alt="SIG" className="icon" />
                         </button>
                         <button onClick={() => handleButtonClick('ChatBot')} data-text="ChatBot">
                             <img src="./chatbot.png" alt="ChatBot" className="icon" />
