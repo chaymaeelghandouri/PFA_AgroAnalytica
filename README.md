@@ -6,11 +6,13 @@
 - Chaymae El Ghandouri
 
 ## Table des matières
-1. [Introduction à AgroAnalytica](#introduction)
+1. [Introduction à AgroAnalytica](#introduction-à-agroanalytica)
 2. [Fonctionnalités](#fonctionnalités)
 3. [Technologies utilisées](#technologies-utilisées)
-4. [Installation et Execution de l'application](#Installation-Execution)
-5. [Date de sortie du JEU](#sortie)
+4. [Installation et Execution de l'application](#installation-et-execution-de-lapplication)
+5. [Avantages pour les utilisateurs](#avantages-pour-les-utilisateurs)
+6. [Date de sortie du JEU](#date-de-sortie-du-jeu)
+  
   
 # Introduction à AgroAnalytica
 AgroAnalytica est une application web qui permet aux agriculteurs et aux agronomes d'analyser les caractéristiques de leur sol et d'obtenir des prédictions de cultures adaptées à celui-ci. Elle est basée sur plusieurs technologies avancées et offre plusieurs fonctionnalités innovantes pour faciliter la gestion agricole.
@@ -37,11 +39,11 @@ L'application est conçue pour être intuitive et facile à utiliser, et elle of
    
     •	Affichage de dashboard qui aide à la gestion de ces mesures lors de la cultivation de la culture prédite.
 
-3. Achat de capteurs IoT :
+6. Achat de capteurs IoT :
    
   • Se magner de capteurs Iot grace à notre mini-store qui offre différents types de capteurs qui serviront à faire une analyse.
 
-5. Discussion avec un Chatbot :
+7. Discussion avec un Chatbot :
 
   • Entamer une discussion avec notre chatBot qui vous guidera lors de la gestion de votre cultivation.
   
@@ -60,7 +62,7 @@ L'application est conçue pour être intuitive et facile à utiliser, et elle of
 [Node.js](https://nodejs.org/en)  est important pour pouvoir exécuter notre application. 
  • Pour installer tous les modules nécessaires au fonctionnement de notre jeu, exécutez les commandes suivante dans un premier terminale :
 
-```npm install -g create-react-app```
+`npm install -g create-react-app`
 
 `npx create-react-app my-app`
 
