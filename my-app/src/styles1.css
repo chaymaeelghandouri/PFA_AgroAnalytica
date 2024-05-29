@@ -64,7 +64,7 @@ body {
 
 .Utilisateur .Navigation .navbox .username span {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 22px;
     text-align: center;
     color: rgb(79, 197, 56);
 }
@@ -72,7 +72,6 @@ body {
 .Utilisateur .Navigation .navbox .username .icon {
     width: 45px;
     height: 45px;
-    margin-left: 15px;
     cursor: pointer;
 }
 
@@ -208,6 +207,7 @@ body {
 
 .Utilisateur .Content  .section-visible {
     display: block;
+    margin-top: 10px;
 }
 
 .Utilisateur .Content .section-hidden {
@@ -219,7 +219,7 @@ body {
 /******************************************COMMUNE**************************************************/
 .Utilisateur .Content .Analyses .name,
 .Utilisateur .Content .Dashboard .name,
-.Utilisateur .Content .SIG .name,
+.Utilisateur .Content .capteur .name,
 .Utilisateur .Content .ChatBot .name,
 .Utilisateur .Content .Profile .name{
     background-color: #68c770;
@@ -242,17 +242,33 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 45%; /* Pour s'assurer qu'elles prennent un peu moins de la moitié de la largeur parente */
+    width: 48%; 
 }
 
 .Utilisateur .Content .Analyses .left .message,
 .Utilisateur .Content .Analyses .rigth .message {
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: #a3f3aa;
     color: green;
     padding: 20px;
     font-size: 14px;
     font-weight: bold;
+}
+
+.Utilisateur .Content .Analyses .rigth .demande{
+    padding: 5px 10px;
+    background-color: rgb(23, 134, 55);
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.Utilisateur .Content .Analyses .rigth .demande:hover {
+    background-color: rgb(38, 205, 86);
 }
 
 .Utilisateur .Content .Analyses .left .bouton,
@@ -283,6 +299,143 @@ body {
     width: 100%; /* Ajustez la largeur comme nécessaire */
     text-align: justify;
 }
+
+/******************************************DASHBOARD**************************************************/
+
+.Dashboard .message {
+    margin-top: 10px;
+    background-color: #a3f3aa;
+    color: green;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.Dashboard .commence {
+    margin: 20px;
+}
+
+.Dashboard .commence a {
+    background-color: #21833a;
+    color: #ffffff;
+    padding: 10px 70px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.Dashboard .commence a:hover {
+    background-color: #41af5d;
+}
+
+.Dashboard .resultat {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.Dashboard .resultat p{
+    color: #21833a;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.image-scroll {
+    margin: 5px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.image-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 20px 10px;
+    scroll-behavior: smooth;
+    background: #f5f5f5;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1167px;
+}
+
+.image-container img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img:hover {
+    width: 250px;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-button {
+    background: gainsboro;
+    margin: 5px;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-button:focus {
+    outline: none;
+}
+
+.scroll-button:hover {
+    background: lightgreen;
+    transform: scale(1.1);
+}
+
+.scroll-button:active {
+    background: lightgreen;
+}
+
+@media (max-width: 600px) {
+    .image-container {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .scroll-button {
+        font-size: 20px;
+        padding: 8px;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
 
 /******************************************CHATBOT**************************************************/
 .Utilisateur .Content .ChatBot {
@@ -323,7 +476,7 @@ body {
     width: 90%;
     position: absolute; 
     bottom: 0; 
-    margin-bottom: 20px;
+    margin-bottom: -17px;
 }
 
 .Utilisateur .Content .ChatBot .input-container input[type="text"] {
@@ -362,7 +515,8 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
-    padding: 20px;
+    padding: 5px;
+    width: 100%;
 }
 
 .form-container, .map-container{
@@ -370,9 +524,7 @@ body {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #f9f9f9;
-    margin-top: 70px;
-    height: 700%;
+    height: 100%;
 }
 
 .map-container .map, .map-container .back {
@@ -427,4 +579,195 @@ body {
 .map-container .leaflet-container {
     height: 700px;
     width: 100%;
+}
+
+/************************************* Profile page *****************************************/
+.Profile .informations {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    height: 90%;
+}
+
+.Profile .informations p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 10px 0;
+    background-color: #61a163;
+    color:white;
+    border-radius: 10px;
+    padding: 35px;
+    transition: all 0.3s ease;
+}
+
+.Profile .informations p:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.Profile .informations p span {
+    font-weight: bold;
+    color: #333;
+}
+
+.Profile .informations p:last-child {
+    margin-bottom: 0;
+}
+
+.Profile p {
+    font-size: 1.2em;
+    color: #555;
+    text-align: center;
+}
+
+/************************************Service Capteurs******************************************/
+
+.capteur .container {
+    max-width: 1200px;
+    margin: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: rgb(188, 231, 168);
+}
+
+.capteur .container .row {
+    display: flex;
+    align-items: flex-end; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.capteur .container .row .text {
+    flex-basis: calc(50% - 10px); /* Prend 50% de l'espace disponible, moins la marge */
+    margin-right: 470px; /* Espacement entre le texte et l'image */
+    margin-top: 25px; /* Marge supérieure pour le texte */
+    align-self: flex-end; /* Pour aligner le texte en bas */
+}
+
+.capteur .container .row .text h1 {
+    font-size: 23px;
+    line-height: 50px;
+    margin: 5px 0;
+}
+
+.capteur .container .row .text p {
+    color:#555;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.capteur .container .row .text a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #61a163;
+    color:white;
+    border-radius: 30px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.capteur .container .row .text a:hover {
+    background-color: #21833a; 
+}
+
+.capteur .container .row .col-2 {
+    flex-basis: 50%;
+    padding: 20px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+.capteur .container .row .col-2 img {
+    width: 107%;
+    align-self: flex-end;
+    margin-top: -271px;
+    margin-right: -310px;
+}
+
+/************************************* Service Categorie *****************************************/
+.categorie {
+    font-family: Arial, sans-serif;
+}
+
+.categorie .container {
+    background-color: gainsboro;
+}
+
+.categorie .container h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #61a163;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.categorie .container .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.categorie .container .row .col-3 {
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.categorie .container .row .col-3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.categorie .container .row .col-3 .icon {
+    width: 60%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.categorie .container .row .col-3 h1 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px;
+    text-align: center;
+}
+
+.categorie .container .row .col-3 .rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.categorie .container .row .col-3 .rating i {
+    color: #ffc107;
+}
+
+.categorie .container .row .col-3 p {
+    font-size: 1rem;
+    color: #777;
+    text-align: center;
+}
+
+
+.categorie .container .row .col-3 button {
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    border: 1px gray;
+    box-shadow: 0 0 10px gray;
+    margin: 11px;
+    text-align: center;
+}
+
+.categorie .container .row .col-3 button:hover {
+    background-color: #21833a;
 }

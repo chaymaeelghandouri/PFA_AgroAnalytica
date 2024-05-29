@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import './styles.css';
-import { MapContainer, TileLayer, Polygon } from 'react-leaflet';
 import axios from 'axios';
-import "leaflet/dist/leaflet.css";
 
-
-function Insert() {
+function Insert({ navigateToDashboard }) {
     const [formData, setFormData] = useState({
         N: '',
         P: '',
@@ -16,111 +13,92 @@ function Insert() {
         rainfall: '',
         label: ''
     });
-    const [polygonCoords, setPolygonCoords] = useState([]);
 
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        setFormData({ ...formData, [name]: value });
-    };
-
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-
-        if (!isValidInput()) {
-            alert('Veuillez entrer des valeurs numériques valides.');
-            return;
-        }
-        
-        const data = {
-            ...formData,
-            N: parseFloat(formData.N),
-            P: parseFloat(formData.P),
-            K: parseFloat(formData.K),
-            temperature: parseFloat(formData.temperature),
-            humidity: parseFloat(formData.humidity),
-            ph: parseFloat(formData.ph),
-            rainfall: parseFloat(formData.rainfall)
+    const [predictionMessageStyle, setPredictionMessageStyle] = useState({
+        display: 'none', 
+        position: 'fixed',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        backgroundColor: 'lightgray',
+        color: 'green',
+        padding: '10px 20px',
+        borderRadius: '5px',
+        zIndex: '999',
+    });
+    
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const { N, P, K, temperature, humidity, ph, rainfall } = e.target.elements;
+        const newFormData = {
+            N: N.value,
+            P: P.value,
+            K: K.value,
+            temperature: temperature.value,
+            humidity: humidity.value,
+            ph: ph.value,
+            rainfall: rainfall.value
         };
-
-        try {
-            const response = await axios.post('http://localhost:3000/predict', data);
-            const { prediction } = response.data;
-            setFormData({ ...formData, label: prediction[7] }); // Mettre à jour le label prédit
-        } catch (error) {
-            alert('Erreur lors de la prédiction. Veuillez réessayer.');
-        }
-    };
-
-    const isValidInput = () => {
-        const { N, P, K, temperature, humidity, ph, rainfall } = formData;
-        return !isNaN(N) && !isNaN(P) && !isNaN(K) && !isNaN(temperature) && !isNaN(humidity) && !isNaN(ph) && !isNaN(rainfall);
-    };
-
-    const handleMapClick = (event) => {
-        const { latlng } = event;
-        const { lat, lng } = latlng;
-        setPolygonCoords([...polygonCoords, [lat, lng]]);
-    };
-
-    const fetchPrediction = async () => {
-        const data = {
-            ...formData,
-            N: parseFloat(formData.N),
-            P: parseFloat(formData.P),
-            K: parseFloat(formData.K),
-            temperature: parseFloat(formData.temperature),
-            humidity: parseFloat(formData.humidity),
-            ph: parseFloat(formData.ph),
-            rainfall: parseFloat(formData.rainfall)
-        };
-
-        try {
-            const response = await axios.post('http://localhost:5000/predict', data); // Modifier l'URL si nécessaire
-            const { prediction } = response.data;
-            setFormData({ ...formData, label: prediction });
-        } catch (error) {
-            alert('Erreur lors de la prédiction. Veuillez réessayer.');
-        }
+        console.log('Form submitted', newFormData);
+    
+        setPredictionMessageStyle({ ...predictionMessageStyle, display: 'block' });
+    
+        axios.post("/predict", newFormData)
+            .then((response) => {
+                console.log('Response received', response.data);
+                navigateToDashboard(response.data);
+            })
+            .catch((error) => {
+                if (error.response) {
+                    console.error('Error response:', error.response);
+                } else {
+                    console.error('Error:', error.message);
+                }
+            })
+            .finally(() => {
+                // Effacez le message après un certain délai
+                setTimeout(() => {
+                    setPredictionMessageStyle({ ...predictionMessageStyle, display: 'none' });
+                }, 3000); // 3000 millisecondes = 3 secondes (ajustez selon vos besoins)
+            });
     };
 
     return (
         <div className="insert">
             <div className="form-container">
-                <header>Insert Data</header>
+                <div id="prediction-message" style={predictionMessageStyle}>
+                    Prediction en cours d'exécution...
+                </div>
                 <form onSubmit={handleSubmit}>
                     <label>
                         Azote (N):
-                        <input type="text" name="N" value={formData.N} onChange={handleChange} />
+                        <input type="text" name="N"/>
                     </label>
                     <label>
                         Phosphore (P):
-                        <input type="text" name="P" value={formData.P} onChange={handleChange} />
+                        <input type="text" name="P"/>
                     </label>
                     <label>
                         Potassium (K):
-                        <input type="text" name="K" value={formData.K} onChange={handleChange} />
+                        <input type="text" name="K"/>
                     </label>
                     <label>
                         Temperature:
-                        <input type="text" name="temperature" value={formData.temperature} onChange={handleChange} />
+                        <input type="text" name="temperature"/>
                     </label>
                     <label>
                         Humidity:
-                        <input type="text" name="humidity" value={formData.humidity} onChange={handleChange} />
+                        <input type="text" name="humidity"/>
                     </label>
                     <label>
                         pH:
-                        <input type="text" name="ph" value={formData.ph} onChange={handleChange} />
+                        <input type="text" name="ph"/>
                     </label>
                     <label>
                         Rainfall:
-                        <input type="text" name="rainfall" value={formData.rainfall} onChange={handleChange} />
+                        <input type="text" name="rainfall"/>
                     </label>
-                    <label>
-                        Culture:
-                        <input type="text" name="label" value={formData.label} onChange={handleChange} />
-                    </label>
-                    <button type="button" onClick={fetchPrediction}>Prédire</button> {/* Ajouter ce bouton pour déclencher la prédiction */}
+                    <button type="submit">Submit</button>
                 </form>
             </div>
         </div>

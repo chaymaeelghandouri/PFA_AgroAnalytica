@@ -44,7 +44,7 @@ function MainPage() {
                     <a href="#Apropos">A propos</a>
                     <a href="#Contact">Contact</a>
                     <a href="Connexion">Connexion</a>
-                    <a href="Créeruncompte">Créer un compte</a>
+                    <a href="creeruncompte">Creer un compte</a>
                 </div>
             </section>
 
@@ -119,8 +119,19 @@ function MainPage() {
                     </p> 
                     <a href="/Contact">Envoyer un message</a>
                 </article>
+                <div className='reseaux'>
+                    <div className='message'> 
+                        Veuillez nous suivre sur les réseaux sociaux cité ci-dessous pour plus d'informations!!
+                    </div>
+                    <div className='social'>
+                        <a href="https://www.facebook.com/AgroAnalytica-106874412877551">www.facebook.com</a>
+                        <a href="https://www.instagram.com/agroanalytica/">www.instagram.com</a>
+                        <a href="https://twitter.com/AgroAnalytica">twitter.com</a>
+                        <a href="https://www.linkedin.com/company/agroanalytica">www.linkedin.com</a>
+                    </div>
+                    <img src="./sprout.png" alt="logo"/>
+                </div>
             </section>
-
         </div>
     );
 }
