@@ -41,11 +41,11 @@ L'application est conçue pour être intuitive et facile à utiliser, et elle of
 
 6. Achat de capteurs IoT :
    
-  • Se magner de capteurs Iot grace à notre mini-store qui offre différents types de capteurs qui serviront à faire une analyse.
+    • Se magner de capteurs Iot grace à notre mini-store qui offre différents types de capteurs qui serviront à faire une analyse.
 
 7. Discussion avec un Chatbot :
 
-  • Entamer une discussion avec notre chatBot qui vous guidera lors de la gestion de votre cultivation.
+    • Entamer une discussion avec notre chatBot qui vous guidera lors de la gestion de votre cultivation.
   
   
 # Technologies utilisées
