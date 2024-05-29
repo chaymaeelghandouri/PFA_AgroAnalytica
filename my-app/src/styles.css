@@ -98,19 +98,17 @@ section .contentBox .formBox h2{
 
 }
 
-.inputBox a[type="Submit"] {
+.inputBox input[type="Submit"] {
     background-color: rgb(27, 58, 42);
     color: white;
     border: 0;
     outline: 0;
     font-weight: 600;
     cursor: pointer;
-    padding: 5px 80px 5px 100px;
-    border-radius: 10px;
-    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
-.inputBox a[type="Submit"]:hover{
+.inputBox input[type="Submit"]:hover{
     background-color: rgb(167, 231, 198);
 }
 
@@ -329,12 +327,13 @@ section .contentBox .formBox h2{
 }
 
 .Contact {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    padding: 60px 20px;
     background-image: url('/public/1.avif');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 800px;
+    height: 600px;
 }
 
 .Contact > .card {
@@ -345,7 +344,7 @@ section .contentBox .formBox h2{
     width: 100%;
     max-width: 800px;
     padding: 40px;
-    margin-left:300px ;
+    margin-left:360px ;
     margin-right:250px ;
     text-align: center;
     position: relative;
@@ -389,8 +388,49 @@ section .contentBox .formBox h2{
     background-color: rgb(38, 205, 86);
 }
 
+.Contact .reseaux {
+    position: absolute;
+    margin-top: 42%;
+    background-color: rgb(24, 121, 53);
+    width: 100%;
+    height: 190px;
+}
 
+.Contact .reseaux .message {
+    font-size: larger;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: rgb(185, 247, 185);
+    line-height: 1.6;
+    margin-bottom: 40px;   
+}
 
+.Contact .reseaux .social {
+    text-align: center;
+    text-decoration: none;
+}
+
+.Contact .reseaux .social a {
+    margin: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.Contact .reseaux .social a:hover {
+    background-color: rgb(38, 205, 86);
+}
+
+.Contact .reseaux img {
+    width: 73px;
+    margin-left: 70px;
+}
 
 /**************************************************Page Contact*******************************/
 *{

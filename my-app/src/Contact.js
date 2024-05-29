@@ -1,29 +1,39 @@
-import React from 'react';
-import './styles.css';
+import React, { useState } from 'react';
+import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 
 function Contact() {
-    //HAD LA PARTIE DLCODE ZDTHA BACH N9DROU NSTOCKEW FWZHED LFICHIER TEXTE DAKCHI LIGHADI Y3MR LUTILISATEUR FLFORMULAIRE
-    //KHESNA NDIROU BHALHA T9RIBAN FAUTHENTIFICATION OU FREGISTER BACH N9DROU NSTOCKEW WAHD LUTILISATEUR FUNE BASE DE DONNEES
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        message: ''
+    });
     const navigate = useNavigate();
 
-    const handleSend = (event) => {
-        event.preventDefault();
-        
-        const firstName = document.getElementById('firstName').value;
-        const lastName = document.getElementById('lastName').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+    const handleSend = (e) => {
+        e.preventDefault();
+        const { firstName, lastName, email, message } = e.target.elements;
+        const newFormData = {
+            firstName: firstName.value,
+            lastName: lastName.value,
+            email: email.value,
+            message: message.value
+        };
+        console.log('Form submitted', newFormData);
 
-        const data = `Prénom: ${firstName}\nNom: ${lastName}\nEmail: ${email}\nMessage: ${message}`;
-        const blob = new Blob([data], { type: 'text/plain;charset=utf-8' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'message.txt';
-        a.click();
-
-        navigate('/');
+        axios.post("/createMessage", newFormData)
+            .then((response) => {
+                console.log('Response received', response.data);
+                navigate('/');
+            })
+            .catch((error) => {
+                if (error.response) {
+                    console.error('Error response:', error.response);
+                } else {
+                    console.error('Error:', error.message);
+                }
+            });
     };
 
     return (
@@ -36,26 +46,26 @@ function Contact() {
             </div>
             <div className="contentBox">
                 <div className="formBox">
-                    <h2>Contact Us</h2>
+                    <h2>Contactez-nous</h2>
                     <form onSubmit={handleSend}>
                         <div className="inputBox1">
                             <span>Prénom</span>
-                            <input type="text" id="firstName" />
+                            <input type="text" name="firstName" />
                         </div>
 
                         <div className="inputBox1">
                             <span>Nom de famille</span>
-                            <input type="text" id="lastName" />
+                            <input type="text" name="lastName" />
                         </div>
 
                         <div className="inputBox1">
                             <span>Email</span>
-                            <input type="email" id="email" />
+                            <input type="email" name="email" />
                         </div>
 
                         <div className="inputBox2">
                             <span>Ecrit ton message</span>
-                            <input type="text" id="message" />
+                            <input type="text" name="message" />
                         </div>
 
                         <div className="inputBox1">
